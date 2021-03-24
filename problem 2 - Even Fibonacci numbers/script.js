@@ -17,10 +17,10 @@ function nextFibNum(num1, num2) {
   let nextNum = 0;
   let sum = 2;
   while (nextNum <= 4000000) {
-    nextNum = num1 + num2;
-    num1 = num2;
+    nextNum = num1 + num2;  // next three lines are just giving new values to nextNum, num1 and num2
+    num1 = num2;            // everything shifts over num1=1, num2=2, nextNum=3, shifts to num1=2, num2=3, nextNum=5
     num2 = nextNum;
-    if ((nextNum % 2 === 0) && (nextNum <= 4000000)) {
+    if ((nextNum % 2 === 0) && (nextNum <= 4000000)) {  // nextNum is even & <= 4mil
       console.log(nextNum)
       sum = sum + nextNum;
       console.log(`SUM ${sum}`);
